@@ -1,4 +1,4 @@
-module github.com/RomanBronevik/realtime-go
+module github.com/romanbronevik/realtime-go
 
 go 1.22
 
