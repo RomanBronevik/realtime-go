@@ -23,7 +23,7 @@ type Conn interface {
 
 // RealtimeClient represents the main client for Supabase Realtime
 type RealtimeClient struct {
-	config         *Config
+	Config         *Config
 	conn           Conn
 	channels       map[string]*channel
 	mu             sync.RWMutex
@@ -48,7 +48,7 @@ func NewRealtimeClient(projectRef string, apiKey string) IRealtimeClient {
 	config.APIKey = apiKey
 
 	return &RealtimeClient{
-		config:   config,
+		Config:   config,
 		channels: make(map[string]*channel),
 		hbStop:   make(chan struct{}),
 		logger:   log.Default(),
